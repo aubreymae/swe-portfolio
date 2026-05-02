@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { works } from "../../data/selected-works";
 import { gsap } from "gsap";
 
@@ -7,6 +8,22 @@ export default function WorksList(WorksListProps: {
   onClick: (id: string) => void;
   selectedWorkId?: string;
 }) {
+  useEffect(() => {
+    const allUnderlines = document.querySelectorAll(".work-underline");
+    allUnderlines.forEach((underline) => {
+      const workId = underline.parentElement?.dataset.workId;
+      if (workId === WorksListProps.selectedWorkId) {
+        gsap.set(underline, {
+          width: "100%",
+        });
+      } else {
+        gsap.set(underline, {
+          width: "0%",
+        });
+      }
+    });
+  }, [WorksListProps.selectedWorkId]);
+
   const handleMouseEnter = (e: React.MouseEvent<HTMLLIElement>) => {
     const underline = e.currentTarget.querySelector(".work-underline");
     gsap.to(underline, {
@@ -30,7 +47,6 @@ export default function WorksList(WorksListProps: {
   };
 
   const handleClick = (workId: string, e: React.MouseEvent<HTMLLIElement>) => {
-    // Animate the clicked item's underline to 100%
     const clickedUnderline = e.currentTarget.querySelector(".work-underline");
     gsap.to(clickedUnderline, {
       width: "100%",
@@ -38,7 +54,6 @@ export default function WorksList(WorksListProps: {
       ease: "power2.out",
     });
 
-    // Animate all other underlines to 0%
     const allUnderlines = document.querySelectorAll(".work-underline");
     allUnderlines.forEach((underline) => {
       if (underline !== clickedUnderline) {
