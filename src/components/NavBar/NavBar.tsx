@@ -1,4 +1,5 @@
 import { useLayoutEffect, useState, useRef } from "react";
+import { NavLink } from "react-router-dom";
 import { gsap } from "gsap";
 import "./NavBar.css";
 
@@ -54,7 +55,7 @@ export default function NavBar() {
           onMouseEnter={() => handleHover(0)}
           onClick={() => handleClick(0)}
         >
-          <a href="#connect">
+          <NavLink to="/">
             <div className="nav-item-wrapper">
               <span className="icon-layer" data-visible={!isActive(0)}>
                 <svg
@@ -92,7 +93,7 @@ export default function NavBar() {
                 Connect
               </span>
             </div>
-          </a>
+          </NavLink>
         </li>
 
         {/* WORKS */}
@@ -103,7 +104,7 @@ export default function NavBar() {
           onMouseEnter={() => handleHover(1)}
           onClick={() => handleClick(1)}
         >
-          <a href="#works">
+          <NavLink to="/works">
             <div className="nav-item-wrapper">
               <span className="icon-layer" data-visible={!isActive(1)}>
                 <svg
@@ -129,7 +130,7 @@ export default function NavBar() {
                 Works
               </span>
             </div>
-          </a>
+          </NavLink>
         </li>
       </ul>
     </nav>
