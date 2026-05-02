@@ -41,26 +41,3 @@ header {
 .header-job-title {
   color: var(--light-gray-1);
 }
-
-#main-nav-bar ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 5px;
-  padding: 5px;
-
-  list-style-type: none;
-  border-radius: 50vh;
-  border: solid 1px var(--light-blue-2);
-}
-
-#main-nav-bar ul li {
-  padding: var(--btn-padding-sm);
-  border-radius: 50vh;
-  border: solid 1px var(--light-blue-2);
-}
-
-#main-nav-bar ul li a {
-  color: var(--light-beige-1);
-  text-decoration: none;
-}

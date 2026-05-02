@@ -1,3 +1,4 @@
+import NavBar from "../NavBar/NavBar";
 import "./Header.css";
 
 export default function Header() {
@@ -29,16 +30,7 @@ export default function Header() {
         <p className="header-job-title">Software Engineer</p>
       </div>
       <div className="mid-col">
-        <nav id="main-nav-bar">
-          <ul>
-            <li>
-              <a href="#connect">Connect</a>
-            </li>
-            <li>
-              <a href="#works">Works</a>
-            </li>
-          </ul>
-        </nav>
+        <NavBar />
       </div>
     </header>
   );
