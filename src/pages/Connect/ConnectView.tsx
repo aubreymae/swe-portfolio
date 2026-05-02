@@ -15,65 +15,71 @@ export default function ConnectView() {
           <h3>Socials</h3>
           <div className="socials-container">
             <ul>
-              <li className="social-link-btn">
-                <a href="/">GitHub</a>
-                <svg
-                  width="24px"
-                  height="24px"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  color="currentColor"
-                >
-                  <path
-                    d="M6.00005 19L19 5.99996M19 5.99996V18.48M19 5.99996H6.52005"
-                    stroke="currentColor"
+              <li>
+                <a href="/" className="social-link-btn">
+                  <span>GitHub</span>
+                  <svg
+                    width="24px"
+                    height="24px"
+                    viewBox="0 0 24 24"
                     stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </svg>
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    color="currentColor"
+                  >
+                    <path
+                      d="M6.00005 19L19 5.99996M19 5.99996V18.48M19 5.99996H6.52005"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </a>
               </li>
-              <li className="social-link-btn">
-                <a href="/">LinkedIn</a>
-                <svg
-                  width="24px"
-                  height="24px"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  color="currentColor"
-                >
-                  <path
-                    d="M6.00005 19L19 5.99996M19 5.99996V18.48M19 5.99996H6.52005"
-                    stroke="currentColor"
+              <li>
+                <a href="/" className="social-link-btn">
+                  <span>LinkedIn</span>
+                  <svg
+                    width="24px"
+                    height="24px"
+                    viewBox="0 0 24 24"
                     stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </svg>
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    color="currentColor"
+                  >
+                    <path
+                      d="M6.00005 19L19 5.99996M19 5.99996V18.48M19 5.99996H6.52005"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </a>
               </li>
-              <li className="social-link-btn">
-                <a href="/">BlueSky</a>
-                <svg
-                  width="24px"
-                  height="24px"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  color="currentColor"
-                >
-                  <path
-                    d="M6.00005 19L19 5.99996M19 5.99996V18.48M19 5.99996H6.52005"
-                    stroke="currentColor"
+              <li>
+                <a href="/" className="social-link-btn">
+                  <span>BlueSky</span>
+                  <svg
+                    width="24px"
+                    height="24px"
+                    viewBox="0 0 24 24"
                     stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </svg>
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    color="currentColor"
+                  >
+                    <path
+                      d="M6.00005 19L19 5.99996M19 5.99996V18.48M19 5.99996H6.52005"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </a>
               </li>
             </ul>
           </div>
