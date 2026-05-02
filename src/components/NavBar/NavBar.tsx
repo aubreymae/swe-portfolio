@@ -58,22 +58,33 @@ export default function NavBar() {
             <div className="nav-item-wrapper">
               <span className="icon-layer" data-visible={!isActive(0)}>
                 <svg
-                  width="24"
-                  height="24"
-                  strokeWidth="1.5"
+                  width="24px"
+                  height="24px"
+                  stroke-width="1.5"
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                   color="currentColor"
                 >
                   <path
-                    d="M5 20V19C5 15.134 8.13401 12 12 12V12C15.866 12 19 15.134 19 19V20"
+                    d="M2.5 9.5L12 4L21.5 9.5"
                     stroke="currentColor"
-                  />
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
                   <path
-                    d="M12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12Z"
+                    d="M7 21V20C7 17.2386 9.23858 15 12 15V15C14.7614 15 17 17.2386 17 20V21"
                     stroke="currentColor"
-                  />
+                    stroke-width="1.5"
+                  ></path>
+                  <path
+                    d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
                 </svg>
               </span>
 
@@ -96,18 +107,21 @@ export default function NavBar() {
             <div className="nav-item-wrapper">
               <span className="icon-layer" data-visible={!isActive(1)}>
                 <svg
-                  width="24"
-                  height="24"
+                  width="24px"
+                  height="24px"
+                  stroke-width="1.5"
                   viewBox="0 0 24 24"
-                  strokeWidth="1.5"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                   color="currentColor"
                 >
                   <path
-                    d="M3.2 14.2222V4C3.2 2.89543 4.09543 2 5.2 2H18.8C19.9046 2 20.8 2.89543 20.8 4V14.2222M3.2 14.2222H20.8M3.2 14.2222L1.71969 19.4556C1.35863 20.7321 2.31762 22 3.64418 22H20.3558C21.6824 22 22.6414 20.7321 22.2803 19.4556L20.8 14.2222"
+                    d="M2 11V4.6C2 4.26863 2.26863 4 2.6 4H8.77805C8.92127 4 9.05977 4.05124 9.16852 4.14445L12.3315 6.85555C12.4402 6.94876 12.5787 7 12.722 7H21.4C21.7314 7 22 7.26863 22 7.6V11M2 11V19.4C2 19.7314 2.26863 20 2.6 20H21.4C21.7314 20 22 19.7314 22 19.4V11M2 11H22"
                     stroke="currentColor"
-                  />
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
                 </svg>
               </span>
 

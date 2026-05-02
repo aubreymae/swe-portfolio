@@ -21,7 +21,7 @@
   top: 50%;
   left: 0;
 
-  height: calc(100% - 6px);
+  height: calc(100% - 9px);
   border-radius: 999px;
 
   background: var(--light-blue-2);
@@ -41,7 +41,7 @@
 /* Click area */
 #main-nav-bar ul li a {
   display: block;
-  padding: var(--btn-padding-sm);
+  padding: var(--btn-padding-xs);
   text-decoration: none;
 }
 
@@ -85,4 +85,9 @@
   opacity: 0;
   transform: translateY(4px);
   pointer-events: none;
+}
+
+.icon-layer svg {
+  width: 20px;
+  height: 20px;
 }
