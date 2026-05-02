@@ -84,9 +84,9 @@ export default function ConnectView() {
           <h3>About Me</h3>
           <div className="detail-container about-me-container">
             <p>
-              I’m currently working at Docebo redefining and improving the
-              developer experience within our product for consultants and
-              customers alike.
+              Hey there, I'm Aubrey and I work at Docebo redefining and
+              improving the developer experience within our product for
+              consultants and customers alike.
             </p>
             <p>
               Outside of work, I’m pursuing a Master of Science in Computer
