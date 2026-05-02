@@ -1,3 +1,7 @@
+#connect-view-container {
+  width: 1000px;
+}
+
 .author-img {
   width: 200px;
   height: 200px;
@@ -49,6 +53,10 @@
 }
 
 @media (width <= 900px) {
+  #connect-view-container {
+    width: 100%;
+  }
+
   .author-img {
     display: none;
   }
