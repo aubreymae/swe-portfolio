@@ -41,3 +41,10 @@ header {
 .header-job-title {
   color: var(--light-gray-1);
 }
+
+/* Mobile Queries */
+@media (width <= 900px) {
+  .top-left-col {
+    display: none;
+  }
+}
