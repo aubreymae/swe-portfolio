@@ -2,9 +2,6 @@
   display: grid;
   grid-template-columns: 1.5fr 3fr;
   gap: var(--gap-md);
-
-  width: 1000px;
-  margin: 0 auto;
 }
 
 .grid-col {

@@ -9,6 +9,7 @@
   --light-blue-5: #3b4959;
   --dark-blue-1: #111111;
   --light-beige-1: #b4aa97;
+  --light-beige-2: #dacdb6;
   --light-green-1: #1d2b1c;
   --light-gray-1: #747776;
 }
@@ -18,6 +19,7 @@
   --gap-sm: 1em;
   --gap-md: 2em;
   --gap-lg: 3em;
+  --gap-xlg: 4em;
 
   --padding-sm: 1em;
   --padding-md: 2em;
