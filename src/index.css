@@ -5,13 +5,14 @@
   --light-blue-1: #44576f;
   --light-blue-2: #2c3642;
   --light-blue-3: #17181c;
+  --light-blue-4: #7290b4;
   --dark-blue-1: #111111;
   --light-beige-1: #b4aa97;
   --light-green-1: #1d2b1c;
   --light-gray-1: #747776;
 }
 
-/* Universal Gap, Margin, Padding Variables */
+/* Universal Gap, Margin, Padding, Border Radius Variables */
 :root {
   --gap-sm: 1em;
   --gap-md: 2em;
@@ -20,6 +21,8 @@
   --padding-sm: 1em;
 
   --btn-padding-sm: 0.2em 0.5em;
+
+  --border-radius-sm: 8px;
 }
 
 /* Universal Effects Variables */
@@ -60,4 +63,19 @@ code {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--light-gray-1);
+  font-weight: 400;
+}
+
+p {
+  color: var(--light-beige-1);
 }
