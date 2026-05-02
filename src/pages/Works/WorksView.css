@@ -5,6 +5,28 @@
   width: 1000px;
 }
 
+.work-preview-img {
+  width: 100%;
+  height: 200px;
+
+  border-radius: var(--border-radius-sm);
+  border: solid 1px var(--light-blue-2);
+}
+
+/* Programming Languages */
+.language-container {
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap-sm);
+}
+
+.lang-bubble {
+  padding: var(--btn-padding-sm);
+  border: solid 1px white;
+  border-radius: 50vh;
+}
+
+/* Mobile Responsiveness */
 @media (width <= 1100px) {
   #works-view-container {
     width: 100%;
