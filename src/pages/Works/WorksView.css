@@ -14,16 +14,11 @@
 }
 
 /* Programming Languages */
-.language-container {
+.language-container ul {
   display: flex;
   flex-direction: row;
   gap: var(--gap-sm);
-}
-
-.lang-bubble {
-  padding: var(--btn-padding-sm);
-  border: solid 1px white;
-  border-radius: 50vh;
+  list-style-type: none;
 }
 
 /* Mobile Responsiveness */

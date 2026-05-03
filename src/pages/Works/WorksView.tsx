@@ -3,6 +3,7 @@ import { Work, works } from "../../data/selected-works";
 
 import WorksList from "../../components/WorksList/WorksList";
 import "./WorksView.css";
+import { LANGUAGE_MAP } from "../../data/languages";
 
 export default function WorksView() {
   const [selectedWork, setSelectedWork] = useState<Work | null>(works[0]);
@@ -73,11 +74,26 @@ export default function WorksView() {
           <div className="info-wrapper">
             <h3>Languages</h3>
             <div className="language-container">
-              {selectedWork?.languages.map((lang) => (
-                <p key={lang} className="lang-bubble">
-                  {lang}
-                </p>
-              ))}
+              <ul>
+                {selectedWork?.languages.map((langKey) => {
+                  const lang = LANGUAGE_MAP[langKey];
+
+                  return (
+                    <li
+                      key={langKey}
+                      style={{
+                        backgroundColor: lang.colors.bg,
+                        border: `solid 1px ${lang.colors.border}`,
+                        color: lang.colors.text,
+                        padding: "var(--btn-padding-md)",
+                        borderRadius: "50vh",
+                      }}
+                    >
+                      {lang.label}
+                    </li>
+                  );
+                })}
+              </ul>
             </div>
           </div>
           <div className="info-wrapper">
