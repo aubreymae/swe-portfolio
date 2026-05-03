@@ -98,7 +98,7 @@ export default function ConnectView() {
               <p>
                 Outside of work, I’m pursuing a Master of Science in Computer
                 Science focusing on Computing Systems. I’m deeply interested in
-                backend systems and performance for visual computing.
+                backend systems and performance.
               </p>
               <p>
                 When I’m not coding, you’ll find me playing video games,
