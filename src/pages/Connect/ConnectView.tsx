@@ -20,7 +20,10 @@ export default function ConnectView() {
             <div className="socials-container">
               <ul>
                 <li>
-                  <a href="/" className="social-link-btn">
+                  <a
+                    href="https://github.com/aubreymae"
+                    className="social-link-btn"
+                  >
                     <span>GitHub</span>
                     <svg
                       width="24px"
@@ -42,7 +45,10 @@ export default function ConnectView() {
                   </a>
                 </li>
                 <li>
-                  <a href="/" className="social-link-btn">
+                  <a
+                    href="https://www.linkedin.com/in/aubreymg/"
+                    className="social-link-btn"
+                  >
                     <span>LinkedIn</span>
                     <svg
                       width="24px"
