@@ -20,7 +20,11 @@ export default function WorksView() {
         <div className="grid-col">
           <div className="info-wrapper">
             <h3>Preview</h3>
-            <img src="/" alt="" className="work-preview-img" />
+            <img
+              src={selectedWork?.image}
+              alt={selectedWork?.title}
+              className="work-preview-img"
+            />
           </div>
           <div className="info-wrapper">
             <h3>Release Date</h3>
@@ -33,7 +37,7 @@ export default function WorksView() {
             <div className="socials-container">
               <ul>
                 <li>
-                  <a href="/" className="social-link-btn">
+                  <a href={selectedWork?.repo_url} className="social-link-btn">
                     <span>Open Repo</span>
                     <svg
                       width="24px"
