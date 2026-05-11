@@ -1,3 +1,6 @@
+import BlogPost from "../../components/BlogPost/BlogPost";
+import { blogPosts } from "../../data/blog-posts";
+
 import "./ConnectView.css";
 
 export default function ConnectView() {
@@ -107,7 +110,18 @@ export default function ConnectView() {
             </div>
           </div>
           <div className="info-wrapper">
-            <h3>Blog Posts</h3>
+            <h3>Recent Posts</h3>
+            <div className="blog-post-container">
+              {blogPosts.map((post) => (
+                <BlogPost
+                  key={post.id}
+                  title={post.title}
+                  date={post.date}
+                  excerpt={post.excerpt}
+                  url={post.url}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>

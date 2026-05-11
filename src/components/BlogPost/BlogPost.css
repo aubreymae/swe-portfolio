@@ -1,0 +1,25 @@
+.blog-post-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  aspect-ratio: 1;
+  text-decoration: none;
+}
+
+.see-full-post-span {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--gap-sm);
+  color: var(--light-gray-1);
+  text-transform: uppercase;
+}
+
+@media (width <= 900px) {
+  .blog-post-item {
+    gap: var(--gap-sm);
+    aspect-ratio: unset;
+  }
+}

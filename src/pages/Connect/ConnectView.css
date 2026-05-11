@@ -52,6 +52,13 @@
   gap: var(--gap-sm);
 }
 
+/* Blog Posts */
+.blog-post-container {
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap-sm);
+}
+
 @media (width <= 900px) {
   #connect-view-container {
     width: 100%;
@@ -59,5 +66,9 @@
 
   .author-img {
     display: none;
+  }
+
+  .blog-post-container {
+    flex-direction: column;
   }
 }
