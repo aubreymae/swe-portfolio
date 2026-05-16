@@ -17,11 +17,23 @@ export default function NavBar() {
     const pill = pillRef.current;
     if (!target || !pill) return;
 
-    const { offsetLeft, offsetWidth } = target;
+    // Use bounding client rects to compute the pill's width and
+    // x position relative to the pill's offsetParent. This avoids
+    // small rounding/padding/border differences on mobile browsers
+    // that can make the pill overflow the nav item.
+    const targetRect = target.getBoundingClientRect();
+    const parentRect = (
+      target.offsetParent as Element | null
+    )?.getBoundingClientRect();
+
+    const x = parentRect
+      ? targetRect.left - parentRect.left
+      : target.offsetLeft;
+    const width = targetRect.width;
 
     gsap.to(pill, {
-      x: offsetLeft,
-      width: offsetWidth,
+      x,
+      width,
       duration: 0.45,
       ease: "power3.out",
       overwrite: "auto",
