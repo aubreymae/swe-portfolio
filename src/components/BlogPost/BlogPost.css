@@ -5,6 +5,11 @@
   width: 100%;
   aspect-ratio: 1;
   text-decoration: none;
+  transition: 0.3s ease all;
+}
+
+.blog-post-item:hover {
+  opacity: 0.6;
 }
 
 .see-full-post-span {
