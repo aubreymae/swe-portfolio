@@ -1,4 +1,4 @@
-import { useLayoutEffect, useState, useRef } from "react";
+import { useLayoutEffect, useState, useRef, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { gsap } from "gsap";
 import "./NavBar.css";
@@ -11,6 +11,7 @@ export default function NavBar() {
 
   const itemRefs = useRef<(HTMLLIElement | null)[]>([]);
   const pillRef = useRef<HTMLSpanElement | null>(null);
+  const containerRef = useRef<HTMLUListElement | null>(null);
 
   const movePill = (index: number) => {
     const target = itemRefs.current[index];
@@ -22,12 +23,13 @@ export default function NavBar() {
     // small rounding/padding/border differences on mobile browsers
     // that can make the pill overflow the nav item.
     const targetRect = target.getBoundingClientRect();
-    const parentRect = (
-      target.offsetParent as Element | null
-    )?.getBoundingClientRect();
+    const container = containerRef.current;
+    const containerRect = container?.getBoundingClientRect();
 
-    const x = parentRect
-      ? targetRect.left - parentRect.left
+    // Compute x relative to the ul container to ensure consistent
+    // positioning across browsers and after fonts/layout shifts.
+    const x = containerRect
+      ? targetRect.left - containerRect.left + (container?.scrollLeft || 0)
       : target.offsetLeft;
     const width = targetRect.width;
 
@@ -43,6 +45,31 @@ export default function NavBar() {
   useLayoutEffect(() => {
     movePill(targetIndex);
   }, [targetIndex]);
+
+  // Extra safety: re-measure on load, resize, and next RAF to avoid
+  // incorrect first-paint measurements (fonts, layout shifts, etc.).
+  useEffect(() => {
+    const onLoad = () => movePill(targetIndex);
+
+    window.addEventListener("load", onLoad);
+
+    const ro =
+      typeof ResizeObserver !== "undefined"
+        ? new ResizeObserver(() => movePill(targetIndex))
+        : null;
+    if (ro && containerRef.current) ro.observe(containerRef.current);
+
+    const rafId = requestAnimationFrame(() => movePill(targetIndex));
+
+    return () => {
+      window.removeEventListener("load", onLoad);
+      if (ro) ro.disconnect();
+      cancelAnimationFrame(rafId);
+    };
+    // targetIndex intentionally omitted to avoid over-triggering; movePill
+    // is already called via useLayoutEffect when index changes.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleHover = (index: number | null) => {
     setHover(index);
