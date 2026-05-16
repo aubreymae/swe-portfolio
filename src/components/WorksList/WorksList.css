@@ -69,5 +69,6 @@
 @media (width <= 500px) {
   .works-list {
     flex-direction: column;
+    gap: var(--gap-md);
   }
 }
